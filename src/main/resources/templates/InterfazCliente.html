@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Cliente</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+</head>
+
+<body class="text-center">
+<style type="text/css">
+html, body {
+		height: 100%;
+	}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+
+.box-100 i{
+font-size:26px;    
+
+.cc:hover {
+    box-shadow: 0px 0px 32px 2px rgba(0,0,0,0.06);
+}
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+</style>
+ 
+<div class="container py-5">
+  <div class="row py-5">
+    <div class="col-12 text-center">
+    <h1 class="mb-2 h1 font-weight-bold">E-Tecnova</h1>
+      <h2 class="mb-2 h1 font-weight-bold">Bienvenido Cliente !</h2>
+      
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+      <div class="row pt-3">
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+    <form action="productos" class="form-group">
+			<input type="submit" class="btn btn-lg  btn-dark" value="Nuestros Productos">
+		</form>
+     </div>
+      <p class="mb-4 ">Vea Todos los Productos que tenemos.</p>
+       </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		<form action="vender" class="form-group">
+			<input type="submit"  class="btn btn-lg  btn-dark" value="Sus Compras">
+		</form>
+     </div>
+      <p class="mb-4 ">Observe sus compras.</p>
+       </div>
+      </div>
+      
+        <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		<form action="login" class="form-group" id="formCerrarSesion">
+			<input type="submit" class="btn btn-lg  btn-dark" value="Cerrar Sesion">
+		</form>
+     </div>
+      <p class="mb-4 ">Vuelva Pronto!</p>
+       </div>
+      </div>
+      
+      
+      </div>
+    
+      </div>
+      
+    </div>
+  </div>
+<div th:insert="layout/footer :: footer"></div>
+
+</body>
+</html>

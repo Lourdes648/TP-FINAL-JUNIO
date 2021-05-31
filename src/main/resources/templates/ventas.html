@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+
+<meta charset="ISO-8859-1">
+<title>Ventas</title>
+</head>
+<body class="text-center">
+<style type="text/css">
+html, body {
+		height: 100%;
+	}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+
+.box-100 i{
+font-size:26px;    
+
+.cc:hover {
+    box-shadow: 0px 0px 32px 2px rgba(0,0,0,0.06);
+}
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+</style>
+<div class="container py-5">
+  <div class="row py-5">
+    <div class="col-12 text-center">
+      <h2 class="mb-2 h1 font-weight-bold">Ventas Realizadas</h2>
+  </div>
+  
+        <div class="table-responsive ">
+            <table class="table align-middle ">
+           
+                <thead>
+                <tr>
+                    <th>Fecha en la que se realiz&oacute;</th>
+                    <th>Total</th>
+                    <th>Productos Vendidos</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="venta : ${ventas}">
+                    <td th:text="${venta.fechaYHora}"></td>
+                    <td th:text="${venta.total}"></td>
+                    <td>
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="producto : ${venta.productos}">
+                                <td th:text="${producto.nombre}"></td>
+                               
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class ="container mt-5">
+ 		<form action="Admin" class="form-group">
+				<input type="submit" class="btn btn-danger " value="Cancelar">
+		</form>
+ </div>
+
+</body>
+</html>

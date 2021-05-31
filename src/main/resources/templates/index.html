@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta charset="UTF-8"/>
+<title>E-Tecnova</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+	html, body {
+		height: 100%;
+	}
+	body {
+		font-family: 'Roboto', sans-serif;
+	background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+	}
+	.demo-container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.btn-lg {
+		padding: 12px 26px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	::placeholder {
+	font-size:14px;
+	letter-spacing:0.5px;
+	}
+	.form-control-lg {
+		font-size: 16px;
+		padding: 25px 20px;
+	}
+	.font-500{
+	font-weight:500;	
+	}
+	.image-size-small{
+	width:140px;
+	margin:0 auto;	
+	}
+	.image-size-small img{
+	width:140px;
+	margin-bottom:-70px;	
+	}
+	.icon-camera{
+	position: absolute;
+    right: -1px;
+    top: 21px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+</style>
+</head>
+<body>
+	<div class="demo-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <div class="text-center image-size-small position-relative">
+        <img src="https://annedece.sirv.com/Images/user-vector.jpg" class="rounded-circle p-2 bg-white">
+       
+        </div>
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h3 class="mb-2 text-center pt-5">Inicia Sesi&oacute;n</h3>
+          <p class="text-center lead">Bienvenido a E-Tecnova</p>
+           
+          <form class="form-signin" th:object="${usuarionuevo}" th:action="@{/login}" method="post">
+           <label class="font-500">Usuario</label>
+		<input type="text" class="form-control" name="username"  required="" autofocus="" />
+		<label class="font-500">Contrase&ntilde;a</label>
+		<input type="password" class="form-control" name="password" required=""/>
+		<p class="m-0 py-4"><a href="" class="text-muted">Forget password?</a></p>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+          </form>
+                
+        </div>        
+      </div>
+    </div>
+  </div>
+  </div>
+  <div th:insert="layout/footer :: footer"></div>
+</body>
+</html>

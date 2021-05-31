@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Administrador</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+
+
+
+<body class="text-center">
+<style type="text/css">
+html, body {
+		height: 100%;
+	}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+
+.box-100 i{
+font-size:26px;    
+
+.cc:hover {
+    box-shadow: 0px 0px 32px 2px rgba(0,0,0,0.06);
+}
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+</style>
+ 
+<div class="container py-5">
+  <div class="row py-5">
+    <div class="col-12 text-center">
+      <h2 class="mb-2 h1 font-weight-bold">Bienvenido Administrador!</h2>
+
+      <div class="row pt-3">
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+    <form action="altaproducto" class="form-group">
+			<input type="submit" class="btn  btn-dark"
+				value="A&ntilde;adir Producto">
+		</form>
+     </div>
+      <p class="mb-4 ">Ingrese un nuevo producto.</p>
+       </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		<form action="altausuario" class="form-group">
+			<input type="submit" class="btn  btn-dark"
+				value="A&ntilde;adir Usuario">
+				</form>
+     </div>
+      <p class="mb-4 ">Ingrese un nuevo usuario.</p>
+       </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		<form action="listaproductos" class="form-group">
+			<input type="submit" class="btn  btn-dark"
+				value="Mostrar Productos">
+		</form>
+     </div>
+      <p class="mb-4 ">Visualice sus productos.</p>
+       </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		
+		<form action="ventas" class="form-group">
+			<input type="submit" class="btn  btn-dark"
+				value="Mostrar Ventas">
+		</form>
+     </div>
+      <p class="mb-4 ">Controle sus ventas</p>
+       </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		
+		<form action="listausuarios" class="form-group">
+			<input type="submit" class="btn  btn-dark"
+				value="Mostrar Usuarios">
+		</form>
+     </div>
+      <p class="mb-4 ">Observe sus usuarios</p>
+       </div>
+      </div>
+      
+        <div class="col-lg-4 col-md-6 vv">
+      <div class="p-4 ">
+     <div class="d-flex justify-content-center align-items-center box-100 mx-auto">
+		
+		<form action="login" class="form-group" id="formCerrarSesion">
+			<input type="submit" class="btn  btn-dark"
+				value="Cerrar Sesion">
+		</form>
+     </div>
+      <p class="mb-4 ">Hasta luego!</p>
+       </div>
+      </div>
+      
+      
+      </div>
+    
+      </div>
+      
+    </div>
+  </div>
+<div th:insert="layout/footer :: footer"></div>
+</body>
+</html>
